@@ -1,0 +1,71 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP9I6nCS+rg9AP+oFjGK0nI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/2403a51030-svg/AIAC/blob/main/ai.task\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_1esW9BTPy-H",
+        "outputId": "4f3f392c-3250-4037-9962-b3044abf783b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bubble Sorted List: [11, 12, 22, 25, 34, 64, 90]\n",
+            "Built-in Sorted List: [11, 12, 22, 25, 34, 64, 90]\n"
+          ]
+        }
+      ],
+      "source": [
+        "def bubble_sort(arr):\n",
+        "    n = len(arr)\n",
+        "    for i in range(n):\n",
+        "        for j in range(0, n - i - 1):\n",
+        "            if arr[j] > arr[j + 1]:\n",
+        "                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n",
+        "    return arr\n",
+        "\n",
+        "# Original list\n",
+        "my_list = [64, 34, 25, 12, 22, 11, 90]\n",
+        "\n",
+        "# 1. Bubble sort\n",
+        "bubble_sorted_list = bubble_sort(my_list.copy()) # Use a copy to keep the original list for the built-in sort\n",
+        "print(\"Bubble Sorted List:\", bubble_sorted_list)\n",
+        "\n",
+        "# 2. Python's built-in sort() method\n",
+        "my_list.sort()\n",
+        "print(\"Built-in Sorted List:\", my_list)"
+      ]
+    }
+  ]
+}
