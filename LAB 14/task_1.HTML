@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sai Abhigna Mulukanooru — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg:#0f1724; --card:#0b1220; --accent:#6ee7b7; --muted:#94a3b8; --glass:rgba(255,255,255,0.04);
+            --maxw:1100px;
+            --ff-sans:'Inter',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            --ff-serif:'Playfair Display',serif;
+        }
+        *{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:var(--ff-sans);background:linear-gradient(180deg,#071026 0%,var(--bg) 100%);color:#e6eef6;line-height:1.5;padding:28px;display:flex;justify-content:center}
+        .wrap{width:100%;max-width:var(--maxw)}
+        header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;gap:16px}
+        .brand{font-family:var(--ff-serif);font-weight:700;color:var(--accent);font-size:1.15rem}
+        nav{display:flex;gap:12px}
+        nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+        nav a:hover{color:#fff;background:var(--glass)}
+        .hero{background:linear-gradient(135deg,rgba(255,255,255,0.02),transparent);padding:20px;border-radius:12px;margin-bottom:18px;display:flex;flex-direction:column;gap:12px}
+        .hero h1{font-family:var(--ff-serif);font-size:1.6rem;color:#fff}
+        .hero p{color:var(--muted)}
+        .layout{display:grid;grid-template-columns:1fr 320px;gap:18px}
+        main{background:var(--card);padding:16px;border-radius:10px}
+        aside{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:10px;height:max-content}
+        section{margin-bottom:18px}
+        .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+        .proj{background:var(--glass);padding:12px;border-radius:8px}
+        .proj h4{margin-bottom:6px;color:#fff}
+        .proj p{font-size:0.92rem;color:var(--muted)}
+        .contact form{display:flex;flex-direction:column;gap:8px}
+        input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px;border-radius:6px;color:#e6eef6}
+        button{background:var(--accent);border:none;color:#042018;padding:10px;border-radius:8px;cursor:pointer;font-weight:600}
+        .meta{font-size:0.9rem;color:var(--muted);margin-top:6px}
+        .palette{display:flex;gap:8px;margin-top:8px}
+        .sw{width:36px;height:28px;border-radius:6px;border:1px solid rgba(255,255,255,0.05)}
+        footer{margin-top:14px;color:var(--muted);font-size:0.85rem;text-align:center}
+        @media(max-width:900px){
+            .layout{grid-template-columns:1fr}
+            .projects{grid-template-columns:1fr}
+            nav{display:none}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="brand">Sai Abhigna Mulukanooru</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <h1>Portfolio — Sai Abhigna Mulukanooru</h1>
+            <p>Roll No: 2403A51014 · Frontend-focused projects, UX-aware design, responsive layouts using Grid & Flexbox.</p>
+        </div>
+
+        <div class="layout">
+            <main>
+                <section id="about">
+                    <h2 style="font-family:var(--ff-serif);margin-bottom:8px">About Me</h2>
+                    <p class="meta">I am Sai Abhigna Mulukanooru (Roll No: 2403A51014). I build clean, accessible web interfaces using modern HTML, CSS and JS. I focus on responsive layouts, performance and thoughtful design.</p>
+                </section>
+
+                <section id="projects">
+                    <h3 style="font-family:var(--ff-serif);margin-bottom:10px">Projects</h3>
+                    <div class="projects">
+                        <div class="proj">
+                            <h4>Personal Portfolio</h4>
+                            <p>Responsive single-page portfolio showcasing projects, smooth navigation and contact form.</p>
+                        </div>
+                        <div class="proj">
+                            <h4>UI Components Library</h4>
+                            <p>Reusable components built with accessibility and theming in mind using CSS variables.</p>
+                        </div>
+                        <div class="proj">
+                            <h4>Responsive Grid Demo</h4>
+                            <p>Interactive layout examples using CSS Grid and Flexbox for different breakpoints.</p>
+                        </div>
+                        <div class="proj">
+                            <h4>Mini Blog</h4>
+                            <p>Lightweight static blog template optimized for readability and performance.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="contact">
+                    <h3 style="font-family:var(--ff-serif);margin-bottom:8px">Contact</h3>
+                    <form action="mailto:example@example.com" method="post" enctype="text/plain">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="message" rows="4" placeholder="Message"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </section>
+            </main>
+
+            <aside>
+                <h4 style="font-family:var(--ff-serif)">Design suggestions (AI)</h4>
+                <div class="meta">Suggested color palette</div>
+                <div class="palette" aria-hidden="true">
+                    <div class="sw" style="background:#071026"></div>
+                    <div class="sw" style="background:#0f1724"></div>
+                    <div class="sw" style="background:#6ee7b7"></div>
+                    <div class="sw" style="background:#94a3b8"></div>
+                </div>
+
+                <div style="margin-top:10px">
+                    <div class="meta">Typography</div>
+                    <div style="margin-top:6px">
+                        <div><strong>Headings:</strong> Playfair Display (serif)</div>
+                        <div><strong>Body:</strong> Inter (sans-serif)</div>
+                    </div>
+                </div>
+
+                <div style="margin-top:12px">
+                    <div class="meta">Layout notes</div>
+                    <ul style="color:var(--muted);margin-top:6px;padding-left:18px">
+                        <li>Use CSS Grid for project gallery and Flexbox for header controls.</li>
+                        <li>Enable smooth scrolling (CSS: scroll-behavior: smooth).</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <footer>
+            Built with HTML & CSS · Smooth scrolling & responsive Grid/Flexbox · Roll No: 2403A51014
+        </footer>
+    </div>
+</body>
+</html>
